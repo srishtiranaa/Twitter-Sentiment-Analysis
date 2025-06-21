@@ -60,11 +60,9 @@ Output: Sentiment class (Positive/Negative) with probability scores
 Large files like .sav and .pkl are tracked using Git LFS.
 
 Make sure to run:
-
-bash
-Copy
-Edit
 git lfs install
+
+
 ✨ **Future Improvements**
 Add emoji handling and stopword cleaning in preprocessing
 
