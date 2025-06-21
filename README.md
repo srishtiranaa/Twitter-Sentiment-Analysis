@@ -39,15 +39,15 @@ git clone https://github.com/srishtiranaa/twitter-sentiment-analysis.git
 cd twitter-sentiment-analysis
 
 
-2.**Install Python dependencies**
+## 2.**Install Python dependencies**
 
 pip install -r requirements.txt
 
-3.Run the Streamlit app
+## 3.Run the Streamlit app
 
 streamlit run app.py
 
-🧪 **Model Details**
+## 🧪 **Model Details**
 Vectorizer: TF-IDF
 
 Classifier: Trained using Scikit-learn (likely Logistic Regression or similar)
@@ -56,14 +56,14 @@ Input: Raw tweet text
 
 Output: Sentiment class (Positive/Negative) with probability scores
 
-📦 **Git LFS**
+## 📦 **Git LFS**
 Large files like .sav and .pkl are tracked using Git LFS.
 
-Make sure to run:
+## Make sure to run:
 git lfs install
 
 
-✨ **Future Improvements**
+## ✨ **Future Improvements**
 Add emoji handling and stopword cleaning in preprocessing
 
 Deploy on cloud (Streamlit Cloud, Render, or Heroku)
