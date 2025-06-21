@@ -1,76 +1,94 @@
 # 🐦 Twitter Sentiment Analysis
 
-This project is a **Twitter Sentiment Analyzer** built with **Streamlit**, **Scikit-learn**, and **MongoDB Atlas**. It uses a pre-trained machine learning model and a TF-IDF vectorizer to classify tweets as Positive or Negative based on their content.
+This project is a **Twitter Sentiment Analyzer** built using **Streamlit**, **Scikit-learn**, and **MongoDB Atlas**. It allows users to input tweets and instantly analyze whether the sentiment is **positive** or **negative**, using a machine learning model trained on textual data.
 
-## 🚀 Features
+---
 
-- 📊 Real-time sentiment prediction on user-entered tweets
-- 💬 Sample tweet buttons to test the model instantly
-- 📈 Probability score chart visualization for sentiment confidence
-- 🧠 ML model (trained offline) and vectorizer used for inference
-- 🗃️ MongoDB Atlas integration to store and retrieve recent analysis
-- 🎨 Beautiful UI with a custom background and sentiment color indicators
-- 📚 Built-in analysis history to track recent predictions
+## 🌟 Features
 
-## 🛠️ Technologies Used
+- 🔍 Real-time sentiment analysis of tweets.
+- 💬 One-click sample tweet testing.
+- 📊 Sentiment score visualization via bar charts.
+- 🧠 Uses pre-trained ML model with TF-IDF vectorization.
+- 🗃️ Stores analysis results in MongoDB Atlas.
+- 🎨 Aesthetic and user-friendly UI with background image and color-coded feedback.
+- 🕒 Displays history of recent analyses.
 
-- **Python** (Streamlit, Pandas, Scikit-learn, Joblib, Pymongo)
-- **JavaScript/Node.js** (Express, Mongoose - for optional backend API handling)
-- **MongoDB Atlas** - for storing tweet analysis logs
-- **Machine Learning** - TF-IDF + Classifier
-- **Streamlit** - for the interactive web interface
+---
 
-## 📁 Project Structure
+## 🛠️ Tech Stack
 
-├── app.py # Main Streamlit application
-├── trained_model.sav # Pre-trained ML model
-├── tfidf_vectorizer.pkl # Fitted TF-IDF vectorizer
-├── package.json # Node.js backend (optional)
-├── .gitattributes # Git LFS config for model/binary files
+| Component    | Technology       |
+|--------------|------------------|
+| Frontend     | Streamlit        |
+| Backend      | Python + MongoDB |
+| ML Model     | Scikit-learn     |
+| Database     | MongoDB Atlas    |
+| Additional   | Joblib, Pandas   |
+
+---
+
+## 📁 Folder Structure
+
+├── app.py # Main Streamlit app
+├── trained_model.sav # Pre-trained classifier
+├── tfidf_vectorizer.pkl # TF-IDF vectorizer for preprocessing
+├── package.json # Node.js config (optional backend use)
+├── .gitattributes # Git LFS config for large files
 ├── README.md # Project documentation
 
 
-## ⚙️ Setup Instructions
 
-1. **Clone the repository**
+---
 
-```bash
+## ⚙️ Setup & Usage
+
+### 1. Clone the Repository
+
+
 git clone https://github.com/srishtiranaa/twitter-sentiment-analysis.git
 cd twitter-sentiment-analysis
 
+### 2. Install Python Dependencies
 
-## 2.**Install Python dependencies**
+Make sure you have Python 3.8+ and pip installed.
+pip install streamlit scikit-learn pandas pymongo joblib
 
-pip install -r requirements.txt
-
-## 3.Run the Streamlit app
+### 3. Launch the App
 
 streamlit run app.py
 
-## 🧪 **Model Details**
-Vectorizer: TF-IDF
+### 4. Launch the App
 
-Classifier: Trained using Scikit-learn (likely Logistic Regression or similar)
+streamlit run app.py
+The app will open in your default browser at http://localhost:8501.
 
-Input: Raw tweet text
+## 💾 MongoDB Atlas Setup
 
-Output: Sentiment class (Positive/Negative) with probability scores
+The app is connected to MongoDB using a hardcoded connection string inside app.py.
+Replace the connection URI with your own MongoDB credentials for secure deployment:
+client = pymongo.MongoClient("your_mongodb_connection_string")
 
-## 📦 **Git LFS**
-Large files like .sav and .pkl are tracked using Git LFS.
+## 📦 Git Large File Support
+This repo uses Git LFS for model and vectorizer files.
+To enable:
+          git lfs install
+          git lfs pull
 
-## Make sure to run:
-git lfs install
+
+## 🔮 Model Details
+Text Preprocessing: TF-IDF Vectorization
+Classifier: Trained using Scikit-learn (e.g., Logistic Regression / Naive Bayes)
+Output: Binary sentiment (Positive 😊 or Negative 😞)
+Confidence: Displayed via probabilities in a bar chart
 
 
-## ✨ **Future Improvements**
-Add emoji handling and stopword cleaning in preprocessing
+## 🚀 Future Enhancements
+Handle emojis, hashtags, and mentions more effectively.
+Add a third "Neutral" sentiment class.
+Provide downloadable reports.
+Add user login and personalized history.
 
-Deploy on cloud (Streamlit Cloud, Render, or Heroku)
 
-Support for Neutral sentiment
-
-Add authentication for saving personalized history
-
-📄** License**
-This project is licensed under the MIT License.
+### 📄 License
+This project is open source and available under the MIT License.
